@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import './header.scss';
 
-import logo from '../../assets/tmovie.png';
+import logo from '../../assets/new m.png';
 
 const headerNav = [
     {
@@ -47,7 +47,7 @@ const Header = () => {
             <div className="header__wrap container">
                 <div className="logo">
                     <img src={logo} alt="" />
-                    <Link to="/">tMovies</Link>
+                    <Link to="/">vMovies</Link>
                 </div>
                 <ul className="header__nav">
                     {

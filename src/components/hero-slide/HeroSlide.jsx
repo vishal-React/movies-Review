@@ -23,8 +23,9 @@ const HeroSlide = () => {
             const params = {page: 1}
             try {
                 const response = await tmdbApi.getMoviesList(movieType.popular, {params});
-                setMovieItems(response.results.slice(1, 4));
-                console.log(response);
+                setMovieItems(response.results);
+                // setMovieItems(response.results.slice(0, 20));
+                
             } catch {
                 console.log('error');
             }
@@ -39,7 +40,8 @@ const HeroSlide = () => {
                 grabCursor={true}
                 spaceBetween={0}
                 slidesPerView={1}
-                // autoplay={{delay: 3000}}
+                autoplay={{delay: 3500}}
+                loop={Infinity}
             >
                 {
                     movieItems.map((item, i) => (
@@ -111,7 +113,7 @@ const TrailerModal = props => {
     const item = props.item;
 
     const iframeRef = useRef(null);
-
+    
     const onClose = () => iframeRef.current.setAttribute('src', '');
 
     return (

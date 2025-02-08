@@ -46,7 +46,7 @@ const MovieGrid = props => {
         let response = null;
         if (keyword === undefined) {
             const params = {
-                page: page + 1
+                page: page + 17
             };
             switch(props.category) {
                 case category.movie:
