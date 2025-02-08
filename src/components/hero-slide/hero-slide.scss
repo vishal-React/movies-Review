@@ -3,7 +3,11 @@
 .hero-slide {
     margin-bottom: 3rem;
 }
-
+@media (max-width : 1024px) {
+    .hero-slide {
+         margin-bottom: 0; 
+    }
+}
 .hero-slide__item {
     padding: 7rem 0;
     width: 100%;
@@ -11,6 +15,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+  
 
     &::before {
         content: "";
@@ -28,14 +33,13 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 100px;
+        height: 60px;
         background-image: linear-gradient(to top, $body-bg, rgba($black, 0));
     }
 
     &__content {
         @include flex(center, center);
         position: relative;
-        // height: 70vh;
 
         &__info {
             
